@@ -1,0 +1,88 @@
+# Automa‡aoo de API
+
+# Objetivo
+
+ Descrever a tecnica utilizada para cobertura do cen rio de testes.
+
+# Estudo das t‚cnicas utilizadas
+
+1. Path Coverage (input)
+
+* Objetivo
+
+Verificar a cobertura da su¡te de testes de acordo com os endpoints implementados, 
+onde executou caminhos diferentes, para garantir que os endpoints implementados 
+estao todos cobertos pelos testes.
+
+* Crit‚rio
+
+A an lise ‚ realizada pela quantidade de URI( URL + URN (Resource name)) implementadas, 
+levando em considera‡ao que se for a mesma URI para m‚todos diferentes, considera-se apenas um, 
+onde foram realizadas ao menos uma requisi‡ao para cada endpoint.
+
+* Cobertura
+
+Get - Single User:               https://reqres.in/api/users/{id}
+Get - Single User Not Found:     https://reqres.in/api/users/{id}
+Put - Update:                    https://reqres.in/api/users/{id}
+Patch - Update:                  https://reqres.in/api/users/{id}
+Delete - Delete:                 https://reqres.in/api/users/{id}
+
+Get - List User:                 https://reqres.in//api/users?page={id)
+
+Get - List <Resource>:           https://reqres.in/api/unknown
+
+Get - Single <Resource>:         https://reqres.in/api/unknown/{id}
+Get - List <Resource> Not Found: https://reqres.in/api/unknown/{id}
+
+Get - Delayed Response:          https://reqres.in//api/users?delay={id}
+
+Post - Create:                   https://reqres.in/api/users
+
+Post - Register - Successfull:   https://reqres.in/api/register
+Post - Register - Unsuccessfull: https://reqres.in/api/register
+
+Post - Login - Successfull:      https://reqres.in/api/login
+Post - Login - Unsuccessfull:    https://reqres.in/api/login
+
+
+Total de endpoints: 8
+
+C lculo: X/8 = XX% de cobertura
+
+2. Status Code Coverage (Output)
+
+* Objetivo
+
+Verificar o retorno dos status code.
+
+* Crit‚rio
+
+Analisar o retorno dos status codes existentes em cada endpoint, conforme documenta‡oes.
+
+* Cobertura
+
+Get - List User - Response:                  200
+Get - Single User - Response::               200
+Get - List <Resource> - Response::           200
+Get - Single <Resource>  Response:           200
+Get - Delayed Response - Response::          200
+Post - Register - Successfull - Response::   200
+Post - Login - Successfull - Response::      200
+Put - Update - Response::                    200
+Patch - Update - Response::                  200
+
+Post - Create - Response::                   201
+
+Delete - Delete - Response::                 204
+
+Post - Register - Unsuccessfull - Response:: 400
+Post - Login - Unsuccessfull - Response::    400
+
+Get - Single User Not Found - Response::     404
+Get - List <Resource> Not Found - Response:: 404
+
+
+Total de status code: 15
+
+x/15 = XX% de cobertura
