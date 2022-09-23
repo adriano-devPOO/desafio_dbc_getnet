@@ -14,6 +14,8 @@ public class Usuario {
 	private String sobrenome;
 	private String email;
 	private String avatar;
+	private String job;
+	private String password;
 	
 	private JSONObject json;
 	
@@ -28,22 +30,61 @@ public class Usuario {
 		this.avatar = avatar;
 	}
 
+	public Usuario(String nome, String sobrenome, String email, String avatar) {
+		super();
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.email = email;
+		this.avatar = avatar;
+	}
 	
+	public Usuario(String nome, String sobrenome, String email) {
+		super();
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.email = email;
+	}
+	
+	public Usuario(String nome, String job) {
+		super();
+		this.nome = nome;
+		this.job = job;
+	}
+	
+	public Usuario(int id) {
+		super();
+		this.id = id;
+	}
 
-//	public String bodyCliente() {
-//		
-//		json = new JSONObject();
-//
-//		json.put("nome", this.nomeCompleto());
-//		json.put("cpf", this.getCpf());
-//		json.put("email", this.getEmail());
-//		json.put("valor", this.getValor());
-//		json.put("parcelas", this.getParcelas());
-//		json.put("seguro", this.getSeguro());
-//		
-//		
-//		return json.toString();
-//	}
+	public String bodyUsuario() {
 		
+		json = new JSONObject();
+
+		json.put("first_name", this.getNome());
+		json.put("last_name", this.getSobrenome());
+		json.put("email", this.getEmail());	
+		
+		return json.toString();
+	}
+	
+    public String bodyJobUsuario() {
+		
+		json = new JSONObject();
+
+		json.put("name", this.getNome());
+		json.put("job", this.getJob());	
+		
+		return json.toString();
+	}
+    
+    public String bodyRegistrarUsuario() {
+		
+		json = new JSONObject();
+
+		json.put("email", this.getEmail());
+		json.put("password", this.getPassword());	
+		
+		return json.toString();
+	}
 
 }
