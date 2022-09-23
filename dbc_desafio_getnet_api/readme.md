@@ -13,3 +13,12 @@ Este projeto foi desenvolvido para automatizacao de API, atraves do RestAssured.
 
 A documentacao tecnica da API esta disponivel no endereco: https://reqres.in/
 URI: https://reqres.in/api/
+
+## Reporte
+
+O método de requisição http Put, URI: https://reqres.in/api/users/{id} não está funcionando.
+O método de requisição http Patch, URI: https://reqres.in/api/users/{id} não está funcionando.
+
+#Desenvolvedor
+
+Adriano Olimpio
