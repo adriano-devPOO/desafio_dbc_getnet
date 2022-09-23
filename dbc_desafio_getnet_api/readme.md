@@ -18,7 +18,3 @@ URI: https://reqres.in/api/
 
 O método de requisição http Put, URI: https://reqres.in/api/users/{id} não está funcionando.
 O método de requisição http Patch, URI: https://reqres.in/api/users/{id} não está funcionando.
-
-#Desenvolvedor
-
-Adriano Olimpio

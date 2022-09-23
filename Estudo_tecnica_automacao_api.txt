@@ -48,7 +48,7 @@ Post - Login - Unsuccessfull:    https://reqres.in/api/login
 
 Total de endpoints: 8
 
-C lculo: X/8 = XX% de cobertura
+Cálculo: 8/8 = 100% de cobertura
 
 2. Status Code Coverage (Output)
 
@@ -85,4 +85,4 @@ Get - List <Resource> Not Found - Response:: 404
 
 Total de status code: 15
 
-x/15 = XX% de cobertura
+15/15 = 100% de cobertura
