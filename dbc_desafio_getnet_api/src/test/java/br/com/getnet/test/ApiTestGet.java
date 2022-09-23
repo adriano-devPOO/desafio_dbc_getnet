@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import br.com.getnet.usuario.Usuario;
 
-public class ApiTestGets {
+public class ApiTestGet {
 
 	private Usuario usuario;
 
