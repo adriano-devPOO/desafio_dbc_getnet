@@ -50,7 +50,7 @@ public class ApiTestGets {
 
 		given()
 		.when()
-			.get("users?page=2")
+			.get("users?page=4&per_page=3")
 		.then()
 			.log().all()
 			.statusCode(200)
@@ -71,7 +71,7 @@ public class ApiTestGets {
 	public void consultarUsuarioPeloId() {
 
 		usuario = new Usuario(2, "Janet", "Weaver", "janet.weaver@reqres.in", "https://reqres.in/img/faces/2-image.jpg");
-
+		
 		given()
 		.when()
 			.get("users/" + usuario.getId())
